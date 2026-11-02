@@ -1,0 +1,23 @@
+h.UBA - prototipo interactivo para instalar en Android y usar sin conexión
+
+1) Descomprimir el ZIP.
+2) En el repositorio local h.UBA, copiar TODO el contenido de esta carpeta dentro de web/prototipo/.
+   Importante: web/index.html principal y el resto de la web no se modifican.
+3) Ejecutar en VS Code desde la carpeta raíz del repositorio:
+   git add web/prototipo
+   git commit -m "Publicar prototipo móvil para presentación"
+   git push origin main
+4) Al finalizar GitHub Actions, en el teléfono Android abrir Chrome y visitar:
+   https://mebisa.github.io/h.UBA/prototipo/
+5) Menú de Chrome (tres puntos) -> Instalar aplicación, o Agregar a la pantalla principal.
+6) Con Wi-Fi conectado, abrir el icono h.UBA. Visitar al menos una vez y dejar que se precarguen
+   las imágenes y PDFs (en total, aproximadamente 10 MB).
+7) ACTIVAR MODO AVIÓN y comprobar inicio, buscador, calendario, recordatorios y formularios.
+
+NOTAS:
+- El prototipo es una adaptación web interactiva del flujo visual. No es una exportación nativa de Figma.
+- Los enlaces externos (SIU, UBA y bibliotecas) requieren Internet.
+- Los datos de formularios se guardan localmente en el navegador.
+- Figma no admite presentación offline en su aplicación móvil.
+- GitHub Pages y service workers requieren HTTPS; abrir index.html directamente desde un ZIP
+  o desde file:// en el teléfono no activa el modo offline instalable.

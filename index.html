@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#09245b">
+  <title>h.UBA · Prototipo navegable</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png" type="image/png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="workspace">
+    <aside class="workspace-sidebar">
+      <div class="brand"><span>h<span class="teal">.</span>UBA</span><small>PROTOTIPO DE NAVEGACIÓN</small></div>
+      <p class="intro">Recorré las pantallas de h.UBA y probá sus accesos, formularios y secciones.</p>
+      <div class="side-label">PANTALLAS PRINCIPALES</div>
+      <nav id="screen-menu" class="screen-menu" aria-label="Pantallas principales"></nav>
+      <div class="side-label">FLUJOS SECUNDARIOS</div>
+      <nav id="extra-menu" class="screen-menu compact" aria-label="Pantallas secundarias"></nav>
+      <div class="sidebar-actions">
+        <button id="reset" class="side-action" type="button">↺ Volver al inicio</button>
+        <button id="toggle-hotspots" class="side-action" type="button" aria-pressed="false">◌ Mostrar zonas clicables</button>
+      </div>
+      <p class="side-foot">Diseño de referencia · h.UBA<br>Prototipo académico · Patricia Retamozo</p>
+    </aside>
+    <main class="workspace-main">
+      <header class="preview-header">
+        <div><span class="preview-label">VISTA INTERACTIVA</span><h1 id="current-title">Inicio</h1></div>
+        <div class="preview-actions"><span class="live-dot"></span><span>Navegación habilitada</span></div>
+      </header>
+      <div class="phone-stage">
+        <div id="phone" class="phone" aria-label="Simulación de h.UBA en un teléfono">
+          <img id="screen-image" class="base-screen" src="assets/inicio.png" alt="Pantalla de inicio de h.UBA" draggable="false">
+          <div id="hotspots" aria-label="Accesos de navegación"></div>
+          <div id="overlay" class="overlay hidden" aria-live="polite"></div>
+          <div id="snackbar" class="snackbar" role="status"></div>
+        </div>
+      </div>
+      <p class="prototype-hint">Elegí una pantalla desde el menú o tocá los botones sobre el teléfono. También podés utilizar las flechas de navegación del navegador.</p>
+    </main>
+  </div>
+  <script src="prototype.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .catch(error => console.warn('La caché sin conexión no se pudo activar:', error));
+      });
+    }
+    document.addEventListener('click', (event) => {
+      const external = event.target.closest('a[href^="http"]');
+      if (external && !navigator.onLine) {
+        event.preventDefault();
+        alert('Este recurso externo necesita conexión a Internet. La navegación interna de h.UBA sigue disponible.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "h.UBA - Prototipo de navegación",
+  "short_name": "h.UBA",
+  "description": "Maqueta interactiva de h.UBA para presentación académica",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f8fc",
+  "theme_color": "#09245b",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

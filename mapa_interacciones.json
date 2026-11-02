@@ -1,0 +1,77 @@
+{
+  "inicio": {
+    "Asistente virtual": "asistente",
+    "Buscador": "buscador",
+    "Mis cosas": "mis-cosas",
+    "Calendario": "calendario",
+    "Recordatorios": "recordatorios",
+    "Configuración": "configuracion",
+    "Más": "mas"
+  },
+  "asistente": {
+    "Escribir": "chat",
+    "Organizar materias": "plan",
+    "Anotar fechas": "nuevo_evento",
+    "Explorar recursos": "buscador"
+  },
+  "buscador": {
+    "Alejandría": "alejandria",
+    "Códice": "codice",
+    "PDF por materia": "pdfs",
+    "Campo de búsqueda": "buscar_recursos"
+  },
+  "mis-cosas": {
+    "Materias": "plan",
+    "Progreso": "plan",
+    "Agregar materia": "plan"
+  },
+  "calendario": {
+    "Agregar evento": "nuevo_evento",
+    "Consultar fechas": "calendario"
+  },
+  "recordatorios": {
+    "Crear": "nuevo_recordatorio"
+  },
+  "mas": {
+    "Configuración": "configuracion",
+    "Ayuda": "ayuda",
+    "Compartir": "compartir",
+    "Acerca de": "acerca"
+  },
+  "configuracion": {
+    "Acerca de": "acerca"
+  },
+  "alejandria": {
+    "Volver": "buscador"
+  },
+  "codice": {
+    "Volver": "buscador"
+  },
+  "pdfs": {
+    "Volver": "buscador"
+  },
+  "plan": {
+    "Volver": "mis-cosas"
+  },
+  "nuevo_evento": {
+    "Guardar": "calendario"
+  },
+  "nuevo_recordatorio": {
+    "Guardar": "recordatorios"
+  },
+  "ayuda": {
+    "Volver": "mas"
+  },
+  "compartir": {
+    "Volver": "mas"
+  },
+  "acerca": {
+    "Volver": "mas"
+  },
+  "chat": {
+    "Volver": "asistente"
+  },
+  "buscar_recursos": {
+    "Volver": "buscador"
+  }
+}
